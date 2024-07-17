@@ -1,0 +1,605 @@
+/* For desktop: */
+.container {
+    width: 75%;
+  }
+  
+  /* For tablets: */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+  }
+  
+  /* For mobile phones: */
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+   
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #001219;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px; /* Adjust the navbar height here */
+    z-index: 2;  /* Higher z-index */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space out the children evenly */
+}
+
+.nav-buttons{
+    display: flex;
+}
+
+.nav-brand {
+    float: left;
+    padding: 10px;
+    color: #001219;
+    text-decoration: none;
+}
+
+#home-logo {
+    height: 70px; /* Adjust the logo height here */
+    width: auto; /* Adjust the width to maintain aspect ratio */
+    float: left;
+    margin-top:-14px; /* Adjust the top margin to center the logo vertically */
+    margin-bottom: 20px; /* Adjust the bottom margin to center the logo vertically */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #001219;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.navbar a:hover {
+    background-color: #001219;
+}
+
+.dropdown {
+    margin-right: 40px;
+    overflow: hidden;
+    margin-top: 30px;
+    vertical-align: middle;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 8px 8px 8px 8px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: inherit;
+}
+
+.navbar a.dropdown, .dropbtn:hover{
+    background-color: #647B88;
+    color: white;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #647B88;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ .sidebar {
+    height: calc(100% - 90px);
+    width: 250px;
+    position: fixed;
+    background-color: #5A7F7B;
+    padding-top: 5px;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    top: 90px;
+} 
+
+.sidebar a {
+    padding: 3px 3px 3px 28px;
+    text-decoration: none;
+    font-size: 15px;  /* Smaller font size */
+    color: #000000;
+    display: block;
+    transition: 0.2s;
+    background-color: #ffffff;  /* Background color for the block */
+    margin-bottom: 7px;  /* Space between blocks */
+    width: 79%;  /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y:visible;
+
+}
+
+.side-bar-icon{
+    vertical-align:middle;
+    font-size: large;
+    padding-right: 20px;
+    margin-left: 0;
+}
+
+.side-bar-item{
+    display:inline-flex;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+    background-color: #FCA311;  /* Background color for the block when hovered */
+}
+
+#main {
+    margin-left: 250px;
+    padding: 16px;
+}
+
+.sidebar-headings{
+    color: white;
+    margin-left: 12px;
+}
+
+.navbar a.logout-button {
+    padding: 15px 35px;
+    margin-top: 23px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    vertical-align: middle;
+    background-color: #7B61FF;  /* Button color */
+    color: #f2f2f2;  /* Text color */
+    border-radius: 10px;  /* Rounded edges */
+    text-decoration: none;
+}
+
+.navbar a.logout-button:hover {
+    background-color: #fd8904;  /* Button color when hovered */
+    color: rgb(249, 247, 247);  /* Text color when hovered */
+}
+
+.nav-brand{
+    font-size: large;
+    margin-top: 10px;
+}
+
+.dashboard-container {
+    display: flex;
+    /* Add a top margin equal to the height of your navbar */
+    margin-top: 100px;
+    width: auto;
+
+}
+
+.dashboard-box1 {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    justify-content: center;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* Add a left margin equal to the width of your sidebar */
+    margin-left: 275px;
+    /* Add a right margin to create some space between the boxes */
+    margin-right: 20px;
+}
+
+.dashboard-box2 {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    justify-content: center;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* Add a left margin equal to the width of your sidebar */
+   
+    /* Add a right margin to create some space between the boxes */
+    margin-right: 20px;
+}
+
+.dashboard-box3 {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    justify-content: center;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* Add a left margin equal to the width of your sidebar */
+   
+    /* Add a right margin to create some space between the boxes */
+    margin-right: 20px;
+}
+
+.stat-description {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.bar-container {
+    height: 300px;
+    width: 700px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 275px;
+    margin-top: 55px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.bar {
+    width: 28px;
+    height: 100px;
+    background-color: #000000;
+    margin: 15px;
+}
+
+.label {
+    text-align: center;
+    width: 20px;
+}
+
+#side-bar-icon {
+padding: 10px;
+text-align: left;
+font-size: 19px;
+margin-left: -25px;
+}
+
+table {
+    margin-top: 10px;
+    margin-left: 270px;
+    width: 60%;
+    border-collapse: collapse;
+    font-size: small;
+}
+
+th, td {
+    border: none;
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1px solid #7B61FF;
+}
+
+
+/* Align the content of the first column to the left */
+th:nth-child(1), td:nth-child(1) {
+    text-align: left;
+}
+
+/* Align the content of the rest of the columns to the right */
+th:nth-child(n+2), td:nth-child(n+2) {
+    text-align: right;
+}
+
+/* Increase the size of the cells in the first column */
+td:nth-child(1), th:nth-child(1) {
+    width: 190px; /* Adjust as needed */
+}
+
+
+.edit-button {
+    background-color: #CA6702; /* Orange */
+    border: none;
+    border-radius: 9px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #001219;
+    color: white;
+}
+
+.search-container, .filter-container {
+    display: inline-block;
+    align-items: left;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-left: 270px;
+    font-family: inherit;
+    font-size: small;
+}
+
+input[type=text], select {
+    padding: 6px;
+    margin-right: 10px;
+    border: 1px solid #7B61FF;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.search-filter {
+    padding: 8px 10px;
+    background-color: #7B61FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: -13px;
+    margin-left: -7px;
+}
+
+.search-filter:hover {
+    background-color: #CA6702;
+}
+
+
+
+.page-heading{
+    margin-top: 120px;
+    margin-bottom: 0px;
+    color: #000;
+    margin-left: 270px;
+}
+
+.new-booking-button{
+    padding: 15px 25px;
+    margin-top: 10px;
+    margin-left: 270px;
+    background-color: #7B61FF;  /* Button color */
+    color: #f2f2f2;  /* Text color */
+    border-radius: 10px;  /* Rounded edges */
+    text-decoration: none; 
+}
+
+.new-shift-creation{
+    padding: 15px 25px;
+    margin-top: 30px;
+    margin-left: 600px;
+    background-color: #7B61FF;  /* Button color */
+    border-color: #7B61FF;
+    color: #f2f2f2;  /* Text color */
+    border-radius: 10px;  /* Rounded edges */
+    text-decoration: none;
+}
+
+.cancel-shift-creation{
+    padding: 15px 25px;
+    margin-top: 30px;
+    margin-left: 8px;
+    background-color: #001219;  /* Button color */
+    border-color: #001219;
+    color: #f2f2f2;  /* Text color */
+    border-radius: 10px;  /* Rounded edges */
+    text-decoration: none; 
+}
+
+.new-booking-button:hover{
+    background-color:#001219;
+    color:white;
+}
+
+.make-booking {
+    background-color: #7B61FF; /* Purple */
+    border: none;
+    border-radius: 9px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.make-booking:hover {
+    background-color: #CA6702;
+    color: white;
+}
+
+.shifts-table-container{
+    display: inline-block;
+    border: 1px solid #5A7F7B;
+    margin-left: 260px;
+    border-radius: 9px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.assigned-shifts-table {
+    border-bottom: 1px solid #5A7F7B;
+    width: 100%;
+    margin-left: 1px;
+}
+
+.assigned-shifts-table td:last-child{
+    padding-left:1px;
+}
+
+.check-in {
+    background-color: #7B61FF; /* Purple */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.check-in:hover{
+    background-color:#CA6702;
+    color: white;
+}
+
+.cancel-shift {
+    background-color: #001219; /* Dark dark blue */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.cancel-shift:hover{
+    background-color:#E53756;
+    color: white;
+
+}
+
+
+#time-picker{
+    margin-left: 600px;
+    margin-top: -290px;
+}
+
+#hour, #minute{
+    font-size: 45px;
+    color:#7B61FF;
+    text-align: center;
+}
+
+span#time-picker-colon{
+    font-size: 50px;
+    padding: 5px;
+}
+
+#am-pm{
+    font-size: 22px;
+    padding: 15px;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+  #calendar-container {
+    padding: 15px;
+    margin-left: 260px;
+  }
+
+  span.flatpickr-day.selected {
+    background: #7B61FF;
+    color: white;
+    border: #7B61FF;
+    font-weight: bold;
+}
+
+.monthly-calendar-container{
+    border: 5px #7B61FF;
+    margin-left: 260px;
+    margin-top: 15px;
+}
+
+.monthly-calendar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+}
+.day {
+    border: 1px solid #E8E8E8;
+    padding: 7px;
+    text-align: left;
+    color: #7d7979;
+    font-family: inherit;
+}
+
+#monthAndYear{
+    margin-left: 15px;
+}
