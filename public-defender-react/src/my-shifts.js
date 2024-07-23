@@ -1,23 +1,24 @@
 // SomePage.js
 import React from 'react';
+import { faFilter, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from './navbar';
 import Sidebar from './sidebar';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 export default function MyShifts() {
   return (
-    <Route>
-        <Route path="my-shifts" component={MyShifts} />
+       
 <div>
-      <Navbar />
-      <Sidebar />
+<Navbar />
+<Sidebar />
       <div>
       <h2 className="page-heading">Active Shifts</h2>
+      <br></br>
 
       <div className="search-container">
         <input type="text" placeholder="Search Shifts..." name="search" />
-        <button type="submit" className="search-filter"><i className="fa fa-search"></i></button>
+        <button type="submit" className="search-filter"><FontAwesomeIcon icon={faSearch} /></button>
       </div>
 
       <div className="filter-container">
@@ -27,7 +28,7 @@ export default function MyShifts() {
           <option value="option2">Option 2</option>
           <option value="option3">Option 3</option>
         </select>
-        <button type="submit" className="search-filter"><i className="fa fa-filter"></i></button>
+        <button type="submit" className="search-filter"><FontAwesomeIcon icon={faFilter} /></button>
       </div>
 
       <div className="my-shifts-table">
@@ -66,11 +67,10 @@ export default function MyShifts() {
           </tbody>
         </table>
 
-        <a href="#newbooking" className="new-booking-button">+ New Booking</a>
+        <button href="#newbooking" className="new-booking-button">+ New Booking</button>
       </div>
     </div>
     </div>
-    </Route>
     
   );
 }

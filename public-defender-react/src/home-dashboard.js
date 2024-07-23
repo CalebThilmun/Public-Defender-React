@@ -2,16 +2,13 @@
 import React from 'react';
 import Navbar from './navbar';
 import Sidebar from './sidebar';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import MyShifts from './my-shifts';
 
 export default function HomeDashboard() {
   return (
-    <Router>
-        <Route path="home-dashboard" component={HomeDashboard} />
+        
 <div>
-      <Navbar />
-      <Sidebar />
+<Navbar />
+<Sidebar />
       <div>
       <div className="dashboard-container">
         <div className="dashboard-box1">
@@ -67,7 +64,6 @@ export default function HomeDashboard() {
       </div>
     </div>
     </div>
-    </Router>
     
   );
 }

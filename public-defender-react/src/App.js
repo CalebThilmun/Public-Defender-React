@@ -1,15 +1,12 @@
 import React from 'react';
-import Sidebar from './sidebar';
-import Navbar from './navbar';
 import './style.css'
+import Sidebar from './sidebar';
 
 const App = () => {
-  return (
-    <div>
-      <Sidebar />
-      <Navbar />
-    </div>
-  );
-};
-
-export default App;
+    return (
+      <div></div>
+    );
+  };
+  
+  export default App;
+  

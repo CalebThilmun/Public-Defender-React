@@ -437,6 +437,7 @@ input[type=text], select {
     color: #f2f2f2;  /* Text color */
     border-radius: 10px;  /* Rounded edges */
     text-decoration: none; 
+    border-color: #7B61FF;
 }
 
 .new-shift-creation{
@@ -464,6 +465,7 @@ input[type=text], select {
 .new-booking-button:hover{
     background-color:#001219;
     color:white;
+    border-color:#001219;
 }
 
 .make-booking {
@@ -551,7 +553,7 @@ input[type=text], select {
 }
 
 #hour, #minute{
-    font-size: 45px;
+    font-size: 40px;
     color:#7B61FF;
     text-align: center;
 }
@@ -562,16 +564,17 @@ span#time-picker-colon{
 }
 
 #am-pm{
-    font-size: 22px;
+    font-size: 20px;
     padding: 15px;
     vertical-align: top;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 10px;
 }
 
   #calendar-container {
     padding: 15px;
     margin-left: 260px;
+    font-family: inherit;
   }
 
   span.flatpickr-day.selected {
@@ -602,4 +605,81 @@ span#time-picker-colon{
 
 #monthAndYear{
     margin-left: 15px;
+}
+
+.react-datepicker__month-container{
+    padding: 16px;
+    font-family: inherit;
+}
+
+div.react-datepicker__header{
+    padding: 16px;
+}
+
+.react-datepicker__navigation {
+    align-items: center;
+    background: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    padding: 5px;
+    border: none;
+    z-index: 1;
+    height: 32px;
+    width: 32px;
+    text-indent: -999em;
+    overflow: hidden;
+    margin-top: 23px;
+}
+
+button.react-datepicker__navigation--previous {
+    left:15px;
+}
+
+button.react-datepicker__navigation--next {
+    right:15px;
+}
+
+div.react-datepicker__day--selected{
+    border-radius: 20px;
+    background-color: #7B61FF;
+    color: white;
+    padding: 3px;
+}
+
+div.react-datepicker__day--selected:hover{
+    background-color: #001219;
+    font-weight: bold;
+}
+
+div.react-datepicker__week{
+    padding: 3px;
+}
+
+div.react-datepicker__week :hover{
+    border-radius: 20px;
+}
+
+div.react-datepicker__day-names{
+    margin-top: 10px;
+    margin-bottom:-5px;
+}
+
+.backward-forward-buttons{
+    padding: 5px 10px;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 25px;
+    background-color:#7B61FF;
+    color: white;
+    border-color: #7B61FF;
+}
+
+.backward-forward-buttons:hover{
+    cursor: pointer;
+    background-color: #001219;
+    border-color: #001219;
 }

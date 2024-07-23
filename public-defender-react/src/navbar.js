@@ -5,7 +5,7 @@ import logo from './assets/Public Defender Logo.png';
 const Navbar = () => {
   return (
     <div className="navbar">
-      <a href="#" className="nav-brand">
+      <a href="/" className="nav-brand">
         <img src={logo} alt="Public Defender Logo" id="home-logo" />
       </a>
       <div className="nav-buttons">
