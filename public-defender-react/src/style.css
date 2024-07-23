@@ -451,6 +451,10 @@ input[type=text], select {
     text-decoration: none;
 }
 
+.new-shift-creation:hover{
+    cursor: pointer;
+}
+
 .cancel-shift-creation{
     padding: 15px 25px;
     margin-top: 30px;
@@ -461,6 +465,11 @@ input[type=text], select {
     border-radius: 10px;  /* Rounded edges */
     text-decoration: none; 
 }
+
+.cancel-shift-creation:hover{
+    cursor: pointer;
+}
+
 
 .new-booking-button:hover{
     background-color:#001219;
@@ -688,4 +697,17 @@ div.react-datepicker__day-names{
     cursor: pointer;
     background-color: #001219;
     border-color: #001219;
+}
+
+.modal-button{
+    background-color: #7B61FF; /* Purple */
+    border: none;
+    border-radius: 9px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
 }
