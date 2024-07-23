@@ -10,7 +10,7 @@ if (root !== null) {
   const reactRoot = ReactDOM.createRoot(root);
   reactRoot.render(
     <React.StrictMode>
-      <ShiftCreation />
+      <ShiftBooking />
     </React.StrictMode>
   );
 }

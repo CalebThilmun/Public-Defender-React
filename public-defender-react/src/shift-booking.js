@@ -4,9 +4,21 @@ import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from './navbar';
 import Sidebar from './sidebar';
+import { useEffect, useState } from 'react';
 
 
 export default function ShiftBooking() {
+
+    const [shifts, setShifts] = useState([]);
+
+    useEffect(() => {
+        const loadedShifts = JSON.parse(localStorage.getItem('shifts'));
+        if (loadedShifts) {
+            setShifts(loadedShifts);
+        }
+    }, []);
+
+
   return (
        
 <div>
@@ -36,34 +48,15 @@ export default function ShiftBooking() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Item 1</td>
-                <td>Item 1</td>
-                <td>Item 1</td>
-                <td>Item 1</td>
-                <td><button className="make-booking">Book Shift</button></td>
-              </tr>
-              <tr>
-                <td>Item 2</td>
-                <td>Item 2</td>
-                <td>Item 2</td>
-                <td>Item 2</td>
-                <td><button className="make-booking">Book Shift</button></td>
-              </tr>
-              <tr>
-                <td>Item 3</td>
-                <td>Item 3</td>
-                <td>Item 3</td>
-                <td>Item 3</td>
-                <td><button className="make-booking">Book Shift</button></td>
-              </tr>
-              <tr>
-                <td>Item 4</td>
-                <td>Item 4</td>
-                <td>Item 4</td>
-                <td>Item 4</td>
-                <td><button className="make-booking">Book Shift</button></td>
-              </tr>
+                            {shifts.map((shift, index) => (
+                                <tr key={index}>
+                                    <td>{shift.title}</td>
+                                    <td>{shift.type}</td>
+                                    <td>{shift.time}</td>
+                                    <td>{shift.date}</td>
+                                    <td><button className="make-booking">Book Shift</button></td>
+                                </tr>
+                            ))}
             </tbody>
           </table>
           <br />

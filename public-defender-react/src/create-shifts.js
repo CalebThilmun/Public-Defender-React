@@ -10,6 +10,7 @@ import Modal from 'react-modal';
 
 export default function ShiftCreation() {
 
+
     const [startDate, setStartDate] = useState(new Date());
     const [hour, setHour] = useState("");
     const [minute, setMinute] = useState("");
@@ -17,6 +18,9 @@ export default function ShiftCreation() {
     const [title, setTitle] = useState("");
     const [shifts, setShifts] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    // Determine the shift type
+    const type = ampm === "AM" ? "Dayshift" : "Nightshift";
     
     const ModalStyles = {
         content: {
@@ -45,11 +49,20 @@ export default function ShiftCreation() {
     //function called from creat shift button
     const createShift = () => {
         const newShift = {
-            date: startDate,
+            date: startDate.toLocaleDateString(),
             time: `${hour}:${minute} ${ampm}`,
-            title: title
+            title: title,
+            type: type
         };
-        localStorage.setItem('shifts', JSON.stringify([...shifts, newShift]));
+
+        // Retrieve the existing shifts from local storage
+    const existingShifts = JSON.parse(localStorage.getItem('shifts')) || []; 
+
+    // Add the new shift to the existing shifts
+    const updatedShifts = [...existingShifts, newShift];
+
+    // Store the updated shifts in local storage
+    localStorage.setItem('shifts', JSON.stringify(updatedShifts));
         
         // Open the modal
         setModalIsOpen(true);
