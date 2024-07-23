@@ -29,7 +29,19 @@ export default function ShiftCreation() {
               <option value="AM">AM</option>
               <option value="PM">PM</option>
             </select>
-          </div>
+        </div>
+
+        <div id="shift-title-picker">
+        <select className="shift-title-picker">
+          <option value="">Please select a title for this shift...</option>
+          <option value="link1">Standard Weekday Day-Shift</option>
+          <option value="link2">Standard Weekday Night-Shift</option>
+          <option value="link3">Weekend Day-Shift</option>
+          <option value="link4">Weekend Night-shift</option>
+          <option value="link5">Special Over-Time Shift</option>
+        </select>
+
+        </div>
           <button className="new-shift-creation">+ Create Shift</button>
           <button className="cancel-shift-creation">Cancel</button>
     </div>

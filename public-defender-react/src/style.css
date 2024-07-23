@@ -498,6 +498,12 @@ input[type=text], select {
     padding-bottom: 5px;
 }
 
+.shift-title-picker{
+    margin-left: 600px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
 
 .assigned-shifts-table {
     border-bottom: 1px solid #5A7F7B;
