@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from './navbar';
 import Sidebar from './sidebar';
 import { useEffect, useState } from 'react';
-
+import Modal from 'react-modal';
 
 export default function ShiftBooking() {
 
@@ -18,6 +18,49 @@ export default function ShiftBooking() {
         }
     }, []);
 
+    const handleBooking = (shift) => {
+      const currentBookings = JSON.parse(localStorage.getItem('booking')) || [];
+      currentBookings.push(shift);
+      localStorage.setItem('booking', JSON.stringify(currentBookings));
+      
+      //update the list and remove the shift from all of the shifts
+      const updatedShifts = shifts.filter(s => s !== shift);
+      setShifts(updatedShifts);
+      localStorage.setItem('shifts', JSON.stringify(updatedShifts));
+      
+      setModalIsOpen(true);
+  };
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const ModalStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        width: '30%',
+        border: '1px solid #ccc',
+        background: '#fff',
+        overflow: 'auto',
+        WebkitOverflowScrolling: 'touch',
+        borderRadius: '4px',
+        outline: 'none',
+        padding: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+        
+    }
+}
+
+const closeModal = () => {
+  // Close the modal and disable the current booking button clicked
+  setModalIsOpen(false);
+};
 
   return (
        
@@ -54,7 +97,7 @@ export default function ShiftBooking() {
                                     <td>{shift.type}</td>
                                     <td>{shift.time}</td>
                                     <td>{shift.date}</td>
-                                    <td><button className="make-booking">Book Shift</button></td>
+                                    <td><button className="make-booking" onClick={() => handleBooking(shift)}>Book Shift</button></td>
                                 </tr>
                             ))}
             </tbody>
@@ -63,6 +106,15 @@ export default function ShiftBooking() {
           <br />
         </div>
       </div>
+      <Modal
+                style={ModalStyles}
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Shift Created"
+            >
+                <h2>The selected shift has been booked successfully!</h2>
+                <button className="modal-button" onClick={closeModal}>OK</button>
+      </Modal>
 </div>
     
   );
