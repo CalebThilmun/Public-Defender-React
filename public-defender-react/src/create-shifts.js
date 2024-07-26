@@ -16,7 +16,6 @@ export default function ShiftCreation() {
     const [minute, setMinute] = useState("");
     const [ampm, setAmpm] = useState("AM");
     const [title, setTitle] = useState("");
-    const [shifts, setShifts] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     // Determine the shift type
