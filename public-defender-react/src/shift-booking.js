@@ -19,9 +19,9 @@ export default function ShiftBooking() {
     }, []);
 
     const handleBooking = (shift) => {
-      const currentBookings = JSON.parse(localStorage.getItem('booking')) || [];
+      const currentBookings = JSON.parse(localStorage.getItem('bookings')) || [];
       currentBookings.push(shift);
-      localStorage.setItem('booking', JSON.stringify(currentBookings));
+      localStorage.setItem('bookings', JSON.stringify(currentBookings));
       
       //update the list and remove the shift from all of the shifts
       const updatedShifts = shifts.filter(s => s !== shift);

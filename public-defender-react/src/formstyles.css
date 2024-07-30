@@ -1,0 +1,143 @@
+.checkDiv{
+    position: absolute;
+    margin-left: 280px;
+    margin-top: 5em;
+    padding-bottom: 30px;
+    float: right;
+ 
+}
+ 
+ 
+.form-container-inner {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+ 
+@media only screen and (min-width: 600px) {
+   
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+ 
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+ 
+.form-container-outer {
+    display: flex;
+    /* Add a top margin equal to the height of your navbar */
+    margin-top: 120px;
+    width: auto;
+    padding: 1.5em;
+    width: 75vw;
+    float: right;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+}
+ 
+ 
+.form-group2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+ 
+.dotted-line {
+    border-top: 1px dotted #ccc;
+    margin: 20px 0;
+}
+ 
+       
+.notesTextBox{
+    width: 80%;
+    height:300px;
+ 
+}
+.notesTextBox input[type="text"] {
+    width: 80%;
+    height: 300px;
+   }
+ 
+ 
+.labeFG2{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.padDiv{
+ text-align: center;      
+}
+ 
+ 
+ 
+div.padDiv2{
+    font-size: 16px;  
+    border: none;
+    outline: none;
+        width:35%;
+        text-align: center;
+        margin-left: 90px;
+        padding: 15px 25px;
+        background-color: #7B61FF;  /* Button color */
+ 
+        color: white;  /* Text color */
+        border-radius: 10px;  /* Rounded edges */
+        text-decoration: none;
+        float: center;
+        position: relative;
+         
+        margin-top: 80px;
+       
+ 
+}
+ 
+ 
+a.padDiv22 {
+    color: #f2f2f2;  /* Text color */
+    text-decoration: none;
+ }
+ 
+ 
+ div.padDiv3{
+    font-size: 16px;  
+    border: none;
+    outline: white;
+    width:35%;
+        position: relative;
+        text-align: center;
+        padding: 15px 25px;
+        margin-left: 90px;
+        background-color: #0a022e;  /* Button color */
+        color: white;  /* Text color */
+        border-radius: 10px;  /* Rounded edges */
+        float: center;
+    }
+   
+   
+a.padDiv33 {
+    color: #f2f2f2;  /* Text color */
+    text-decoration: none;
+ }

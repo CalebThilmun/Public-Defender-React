@@ -1,0 +1,734 @@
+/* For desktop: */
+.container {
+    width: 75%;
+  }
+ 
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+}
+ 
+.checkDiv{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 5em;
+    float: right;
+ 
+}
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+ 
+ .dropdown {
+            position: relative;
+            display: inline-block;
+           
+          display: flex;
+            margin-top: 1.3em;
+            margin-left: 20px;
+           
+             
+ 
+ 
+        }
+ 
+        /* Style for the dropdown button */
+        .dropdown button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+           
+        }
+ 
+        /* Style for the dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+ 
+.notesClass{
+        display:block;
+        margin-bottom: 5px;
+       
+ 
+        }
+        .padDiv{
+ 
+         
+        text-align: center;
+           
+        }
+div.padDiv2{
+    font-size: 16px;  
+    border: none;
+    outline: none;
+        width:35%;
+        text-align: center;
+        margin-left: 90px;
+        padding: 15px 25px;
+        background-color: #7B61FF;  /* Button color */
+ 
+        color: white;  /* Text color */
+        border-radius: 10px;  /* Rounded edges */
+        text-decoration: none;
+        float: center;
+        position: relative;
+         
+        margin-top: 80px;
+       
+ 
+    }
+.labeFG2{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+    div.padDiv3{
+        font-size: 16px;  
+        border: none;
+        outline: white;
+        width:35%;
+            position: relative;
+            text-align: center;
+            padding: 15px 25px;
+            margin-left: 90px;
+            background-color: #0a022e;  /* Button color */
+            color: white;  /* Text color */
+            border-radius: 10px;  /* Rounded edges */
+            float: center;
+        }
+       
+.notesTextBox{
+    width: 80%;
+    height:300px;
+ 
+}
+.notesTextBox input[type="text"] {
+    width: 80%;
+    height: 300px;
+   }
+       /* Style for the dropdown options */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+ 
+        /* Style for the dropdown options on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+ 
+        /* Show the dropdown content when the button is clicked */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        label {
+            display: inline-block;
+            clear: left;
+            width: 200px; /* Adjust as needed */
+            text-align: left; /* Change to 'right' if desired */
+        }
+        select {
+            display: inline-block;
+            clear: left;
+            width: 200px; /* Adjust as needed */
+            text-align: left; /* Change to 'right' if desired */
+            padding: 10px; /* Increase padding for thickness */
+            border-radius: 10px; /* Add rounded corners */
+            border: 2px solid #647B88; /* Border color */
+ 
+        }
+       
+        /* Change the hover color */
+        select:hover {
+           
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #647B88;
+            color: #ffffff; /* Text color when hovering */
+        }
+        .hoverable {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            border: 10px solid #647B88;
+        }
+       
+        /* Change the hover color for the button */
+        .hoverable:hover {
+           
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #647B88;
+            color: #ffffff;
+        }
+ 
+        select option {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #647B88;
+            color: #ffffff; /* Text color when hovering */
+        }
+       
+        optgroup {
+            /* Apply styles to the optgroup (optional) */
+            font-weight: bold;
+        }
+        option {
+            /* Apply styles to individual options */
+            background-color: #647B88;
+            color: #647B88;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px; /* Rounded borders for each option */
+        }
+ 
+       .custom-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+ 
+        /* Style the button that triggers the dropdown */
+        .custom-dropdown button {
+            background-color: #647B88;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+        /* Style the dropdown content */
+        .custom-dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+ 
+        /* Style the individual options */
+        .custom-dropdown .dropdown-content option {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #647B88;
+            color: #ffffff;
+        }
+ 
+        /* Show the dropdown content on hover */
+        .custom-dropdown:hover .dropdown-content {
+            display: block;
+        }
+.dotted-line {
+    border-top: 1px dotted #ccc;
+    margin: 20px 0;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  /* For tablets: */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+  }
+ 
+  /* For mobile phones: */
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+  }
+ 
+/* For desktop: */
+.container {
+    width: 75%;
+  }
+ 
+  /* For tablets: */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+  }
+ 
+  /* For mobile phones: */
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+  }
+ 
+  /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+ 
+@media only screen and (min-width: 600px) {
+   
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+ 
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+ 
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+ 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+ 
+.navbar {
+    overflow: hidden;
+    background-color: #001219;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh; /* Adjust the navbar height here */
+    z-index: 2;
+   
+   
+}
+ 
+ 
+.nav-brand {
+    float: left;
+    padding: 10px;
+    color: #001219;
+    text-decoration: none;
+}
+ 
+#home-logo {
+    height: 70px; /* Adjust the logo height here */
+    width: auto; /* Adjust the width to maintain aspect ratio */
+    float: left;
+    margin-top:-14px; /* Adjust the top margin to center the logo vertically */
+    margin-bottom: 20px; /* Adjust the bottom margin to center the logo vertically */
+}
+ 
+.navbar a {
+    float: left;
+    display: block;
+    color: #001219;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+ 
+ 
+.navbar a:hover {
+    background-color: #001219;
+}
+ 
+/* .dropdown {
+    float: left;
+    overflow: hidden;
+    padding-left: 600px;
+    margin-top: 30px;
+    vertical-align: middle;
+} */
+ 
+.dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 8px 8px 8px 8px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: inherit;
+    margin-left: 40em;
+    margin-right: 5px;
+       
+}
+ 
+ 
+.navbar a.dropdown, .dropbtn:hover{
+    background-color: #647B88;
+    color: white;
+}
+ 
+ 
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+ 
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+ 
+.dropdown-content a:hover {
+    background-color: #647B88;
+    color: white;
+}
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+.sidebar {
+    height: 66.2vh;
+    width: 250px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;  /* Lower z-index */
+    left: 0;
+    background-color: #5A7F7B;
+    overflow-x: hidden;
+    padding-top: .8em;
+    overflow-y: hidden;
+    padding-bottom: 100px;
+   
+ 
+}
+.content2 {
+    flex-grow: 1; /* Allow content to take remaining space */
+    /* Additional styling for the content area */
+}
+.form-group2 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+.child2 {
+ 
+    /* Additional styling for each child div */
+}
+.container2 {
+    display: flex;
+}
+.sidebar a {
+    padding: 3px 3px 3px 32px;
+    text-decoration: none;
+    font-size: 15px;  /* Smaller font size */
+    color: #000000;
+    display: block;
+    transition: 0.2s;
+    background-color: #ffffff;  /* Background color for the block */
+    margin-bottom: 7px;  /* Space between blocks */
+    width: 79%;  /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+ 
+}
+ 
+.sidebar a:hover {
+    color: #ffffff;
+    background-color: #FCA311;  /* Background color for the block when hovered */
+}
+ 
+#main {
+    margin-left: 250px;
+    padding: 16px;
+}
+ 
+.sidebar-headings{
+    color: white;
+    margin-left: 12px;
+}
+ 
+.navbar a.logout-button {
+    padding: 15px 25px;
+    margin-right: 15px;
+    background-color: #7B61FF;  /* Button color */
+    color: #f2f2f2;  /* Text color */
+    border-radius: 10px;  /* Rounded edges */
+    text-decoration: none;
+    float: right;
+}
+ 
+a.padDiv22 {
+    color: #f2f2f2;  /* Text color */
+    text-decoration: none;
+ }
+ 
+a.padDiv33 {
+    color: #f2f2f2;  /* Text color */
+    text-decoration: none;
+ }
+ 
+ 
+ 
+.user-profile {
+    display: flex;
+    align-items: center; /* Vertically align photo and name */
+  }
+ 
+  .text
+  {
+    position: relative;
+    bottom: 0;
+    height: 3em;
+    width: 50%;
+    display: flex;
+ 
+  }
+ 
+  .text p
+  {
+    position: absolute;
+    left: 0;
+    line-height: -.4em;
+  }
+ 
+  .user-profile img {
+    width: 70px; /* Adjust size as needed */
+    height: 70px;
+    border-radius: 50%; /* Make it round */
+    margin-right: 10px; /* Space between photo and name */
+  }
+ 
+  .user-name {
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+    display: block;
+  }
+ 
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+h2 {
+    text-align: center;
+    color: #333;
+}
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+ 
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+ 
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+ 
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #007bff;
+}
+ 
+.form-group .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.form-group .buttons button {
+    padding: 200px 200px;
+    border: 20px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+ 
+.save-button {
+    padding: 20px 30px;
+ 
+    border: 5px solid;
+    border-radius: 15px;
+   
+    background-color: #7B61FF;
+    color: #ffffff;
+}
+ 
+.cancel-button {
+    padding: 20px 30px;
+ 
+    border: 5px solid;
+    border-radius: 15px;
+   
+    background-color: #ccc;
+    color: #ffffff;
+}
+ 
+.form-group .buttons button:hover {
+    background-color: #0056b3;
+}
+ 
+.navbar a.logout-button:hover {
+    background-color: #fd8904;  /* Button color when hovered */
+    color: rgb(249, 247, 247);  /* Text color when hovered */
+}
+ 
+.nav-brand{
+    font-size: large;
+    margin-top: 10px;
+}
+ 
+.dashboard-container {
+    display: flex;
+    /* Add a top margin equal to the height of your navbar */
+    margin-top: 120px;
+    width: auto;
+    padding: 1.5em;
+    width: 75vw;
+    float: right;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+}
+ 
+.dashboard-box1 {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    justify-content: center;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* Add a left margin equal to the width of your sidebar */
+    margin-left: 275px;
+    /* Add a right margin to create some space between the boxes */
+    margin-right: 20px;
+}
+ 
+.dashboard-box2 {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    justify-content: center;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* Add a left margin equal to the width of your sidebar */
+   
+    /* Add a right margin to create some space between the boxes */
+    margin-right: 20px;
+}
+ 
+.dashboard-box3 {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+    justify-content: center;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /* Add a left margin equal to the width of your sidebar */
+   
+    /* Add a right margin to create some space between the boxes */
+    margin-right: 20px;
+}
+ 
+.stat-description {
+    font-size: 15px;
+    padding: 5px;
+}
+ 
+.bar-container {
+    height: 300px;
+    width: 700px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 275px;
+    margin-top: 55px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    justify-content: center;
+}
+ 
+.bar {
+    width: 28px;
+    height: 100px;
+    background-color: #000000;
+    margin: 15px;
+}
+ 
+.label {
+    text-align: center;
+    width: 20px;
+}
+ 
+#side-bar-icon {
+padding: 10px;
+text-align: left;
+font-size: 19px;
+margin-left: -25px;
+}

@@ -16,6 +16,7 @@ export default function ShiftCreation() {
     const [minute, setMinute] = useState("");
     const [ampm, setAmpm] = useState("AM");
     const [title, setTitle] = useState("");
+    const [duration, setDuration] = useState("");
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     // Determine the shift type
@@ -40,7 +41,8 @@ export default function ShiftCreation() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            
             
         }
     }
@@ -51,7 +53,9 @@ export default function ShiftCreation() {
             date: startDate.toLocaleDateString(),
             time: `${hour}:${minute} ${ampm}`,
             title: title,
-            type: type
+            type: type,
+            duration: duration,
+            status: 'pending'
         };
 
         // Retrieve the existing shifts from local storage
@@ -75,6 +79,7 @@ export default function ShiftCreation() {
         setMinute("");
         setAmpm("AM");
         setTitle("");
+        setDuration("");
     };
 
   return (
@@ -87,7 +92,8 @@ export default function ShiftCreation() {
         <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} inline />
       </div>
 
-      <div id="time-picker">
+<div className="picker-container">
+<div id="time-picker">
                 <input type="number" id="hour" name="hour" min="1" max="12" placeholder="HH" onChange={(e) => setHour(e.target.value)} value={hour}/>
                 <span id="time-picker-colon">:</span>
                 <input type="number" id="minute" name="minute" min="0" max="59" placeholder="MM" onChange={(e) => setMinute(e.target.value)} value={minute}/>
@@ -108,9 +114,25 @@ export default function ShiftCreation() {
         </select>
 
         </div>
+
+        <div id="shift-duration-picker">
+                <select className="shift-duration-picker" onChange={(e) => setDuration(e.target.value)} value={duration}>
+                    <option value="">Please select a duration...</option>
+                    <option value="2 hours">2 hours</option>
+                    <option value="3 hours">3 hours</option>
+                    <option value="4 hours">4 hours</option>
+                    <option value="5 hours">5 hours</option>
+                    <option value="6 hours">6 hours</option>
+                    <option value="7 hours">7 hours</option>
+                    <option value="8 hours">8 hours</option>
+                </select>
+        </div>
+
           <button className="new-shift-creation" onClick={createShift}>+ Create Shift</button>
           <button className="cancel-shift-creation">Cancel</button>
 
+</div>
+      
           <Modal
                 style={ModalStyles}
                 isOpen={modalIsOpen}

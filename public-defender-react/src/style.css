@@ -564,7 +564,7 @@ input[type=text], select {
 
 #time-picker{
     margin-left: 600px;
-    margin-top: -290px;
+    margin-top: -340px;
 }
 
 #hour, #minute{
@@ -590,6 +590,7 @@ span#time-picker-colon{
     padding: 15px;
     margin-left: 260px;
     font-family: inherit;
+    z-index: 1;
   }
 
   span.flatpickr-day.selected {
@@ -1014,4 +1015,14 @@ div.padDiv3{
         float: left;
         padding: 20px;
         border: 2px solid red;
+    }
+
+    .shift-duration-picker{
+    margin-left: 600px;
+    margin-top: 30px;
+    padding: 15px;
+    }
+
+    .picker-container{
+        margin-bottom: 50px;
     }

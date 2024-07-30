@@ -4,9 +4,21 @@ import { faFilter, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from './navbar';
 import Sidebar from './sidebar';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function MyShifts() {
+
+  const [bookedShifts, setBookedShifts] = useState([]);
+
+  useEffect(() => {
+    const loadedBookings = JSON.parse(localStorage.getItem('bookings'));
+    if (loadedBookings) {
+      setBookedShifts(loadedBookings);
+    }
+  }, []);
+
   return (
        
 <div>
@@ -37,37 +49,24 @@ export default function MyShifts() {
             <tr>
               <th>Task</th>
               <th>Type</th>
-              <th>Priority</th>
               <th>Date</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Item 1</td>
-              <td>Item 1</td>
-              <td>Item 1</td>
-              <td>Item 1</td>
-              <td><button className="edit-button">Edit</button></td>
-            </tr>
-            <tr>
-              <td>Item 2</td>
-              <td>Item 2</td>
-              <td>Item 2</td>
-              <td>Item 2</td>
-              <td><button className="edit-button">Edit</button></td>
-            </tr>
-            <tr>
-              <td>Item 3</td>
-              <td>Item 3</td>
-              <td>Item 3</td>
-              <td>Item 3</td>
-              <td><button className="edit-button">Edit</button></td>
-            </tr>
-          </tbody>
+              {bookedShifts.map((shift, index) => (
+                <tr key={index}>
+                  <td>{shift.title}</td>
+                  <td>{shift.type}</td>
+                  <td>{shift.date}</td>
+                  <td><button className="edit-button">Edit</button></td>
+                </tr>
+              ))}
+            </tbody>
         </table>
-
-        <button href="#newbooking" className="new-booking-button">+ New Booking</button>
+        <br></br>
+        <br></br>
+        <Link to="/shift-booking" className="new-booking-button">+ New Booking</Link>
       </div>
     </div>
     </div>
