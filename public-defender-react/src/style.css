@@ -1026,3 +1026,77 @@ div.padDiv3{
     .picker-container{
         margin-bottom: 50px;
     }
+
+    /* Add this CSS to your stylesheet */
+.calendar-block {
+    border: 2px dotted;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    text-align: left;
+    position: relative;
+    
+  }
+  
+  .dayshift {
+    border-color: #FCA311;
+  }
+  
+  .nightshift {
+    border-color: #7B61FF;
+  }
+
+  .bookingTitle{
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .profile-container {
+    position: absolute;
+    bottom: 5px;
+    right: 5px
+  }
+
+  .profile-icon {
+    width: 35px; /* Adjust the size as needed */
+    height: 35px; /* Adjust the size as needed */
+    border-radius: 50%; /* This makes the icon circular */
+    object-fit: cover; /* Ensures the image covers the entire area of the circle */
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    
+  }
+  
+  .profile-hover-box {
+    display: none;
+    position: absolute;
+    bottom: 40px; /* Adjust as needed to position the hover box */
+    left: 2px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), /* General shadow */
+              10px 10px 20px rgba(0, 0, 0, 0.3), /* Darker shadow on left and bottom */
+              -5px -5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 220px;
+    height: 180px;
+    font-size: 13px;
+  }
+  
+  .profile-container:hover .profile-hover-box {
+    display: block;
+  }
+  
+  .profile-hover-image {
+    width: 70px; /* Adjust the size as needed */
+    height: 70px; /* Adjust the size as needed */
+    border-radius: 50%; /* This makes the hover image circular */
+    object-fit: cover; /* Ensures the image covers the entire area of the circle */
+    margin-bottom: 10px;
+  }
+  
