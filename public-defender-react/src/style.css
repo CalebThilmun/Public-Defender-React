@@ -732,6 +732,7 @@ div.react-datepicker__day-names{
 .form-group input[type="password"] {
     width: 80%;
     padding: 10px;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: border-color 0.3s ease;
@@ -853,7 +854,8 @@ div.padDiv3{
         padding: 20px;
         background-color: #ffffff;
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: #ccc 3px dashed;
+        
     }
 
     .form-container-outer {
@@ -870,17 +872,18 @@ div.padDiv3{
      
      
     .form-group2 {
-        margin-bottom: 20px; /* Adjust the value as needed */
+        margin-bottom: 20px;
+         /* Adjust the value as needed */
     }
      
     .dotted-line {
-        border-top: 1px dotted #ccc;
+        border-top: 2px dashed #ccc;
         margin: 20px 0;
     }
      
            
     .notesTextBox{
-        width: 80%;
+        width: 110%;
         height:300px;
      
     }
@@ -996,6 +999,37 @@ div.padDiv3{
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.3s ease;
         font-weight: bold;
+    }
+
+    .form-date-input{
+        padding: 5px;
+        margin: 7px;
+    }
+
+    .form-text-input{
+        padding: 5px;
+        margin: 7px;
+    }
+
+    .form-check-input{
+        padding: 5px;
+        margin: 7px;
+    }
+
+    .form-select-input{
+        padding: 10px;
+        margin: 7px;
+    }
+
+    .form-time-input{
+        padding: 10px;
+        margin: 7px;
+    }
+
+    .form-long-input{
+        padding: 10px;
+        margin: 7px;
+        width: 100%;
     }
      
      
