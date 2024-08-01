@@ -203,6 +203,11 @@ body {
     background-color: #FCA311;  /* Background color for the block when hovered */
 }
 
+.sidebar a.active {
+    background-color: #FCA311;
+    color: white;
+  }
+
 #main {
     margin-left: 250px;
     padding: 16px;
@@ -1099,4 +1104,5 @@ div.padDiv3{
     object-fit: cover; /* Ensures the image covers the entire area of the circle */
     margin-bottom: 10px;
   }
+  
   
